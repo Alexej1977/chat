@@ -6,6 +6,7 @@ box-sizing: border-box;
 }
 h1{
     visibility: hidden;
+    display: none;
 }
 
 .form{
