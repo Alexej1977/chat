@@ -5,7 +5,6 @@ padding: 0;
 box-sizing: border-box;
 }
 h1{
-    visibility: hidden;
     display: none;
 }
 
@@ -35,7 +34,8 @@ textarea {
     margin: 0;
     border: 1px solid #000;
     box-sizing: border-box;
-
+    background-color:#22b1ff;
+    font-weight: 800;
 
 }
 .input{
@@ -45,5 +45,5 @@ textarea {
     margin: 0;
     border: 1px solid #000;
     box-sizing: border-box;
-margin-right: 10px;
+    margin-right: 10px;
 }
