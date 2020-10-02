@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', function (e) {
     input.value = '';
     text1.value = '';
-    })
+    });
 
     input.addEventListener('input', function(e){
          text1.value = input.value;   

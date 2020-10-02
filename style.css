@@ -35,7 +35,7 @@ textarea {
     margin: 0;
     border: 1px solid #000;
     box-sizing: border-box;
-    background-color:#22b1ff;
+    /* background-color:#22b1ff; */
     font-weight: 800;
 
 }
@@ -47,12 +47,10 @@ textarea {
     border: 1px solid #000;
     box-sizing: border-box;
     margin-right: 10px;
+    color: rgb(23, 16, 119);
 }
 .button:hover{
     border: 2px solid rgb(32, 137, 179);
     /* background-color: aqua; */
     box-shadow: 0 0 25px rgb(150, 237, 240);
-}
-.h2{
-    color: red;
 }
