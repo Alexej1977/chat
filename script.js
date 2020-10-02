@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     input = document.querySelector('.input');
 
 btn.addEventListener('click', function (e) {
-    input.innerHTML = '';}
+    // input.innerHTML = '666';
+    input.value = '';
+    console.log('click');
+  });
 
 
 
