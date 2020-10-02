@@ -3,19 +3,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     let btn = document.querySelector('.button'),
-    input = document.querySelector('.input');
+    input = document.querySelector('.input'),
+    text1 = document.querySelector('.area-1');
 
-btn.addEventListener('click', function (e) {
-    // input.innerHTML = '666';
+    btn.addEventListener('click', function (e) {
     input.value = '';
-    console.log('click');
-  });
+    text1.value = '';
+    });
 
-
-
-
-
-
-
+    input.addEventListener('input', function(e){
+         text1.value = input.value;   
+    })
 
 });
+
