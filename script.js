@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		text2 = document.querySelector('.area-2');
 
 	btn.addEventListener('click', function (e) {
-
 		if (text1.value !== '') {
 			i += 1;
 			text2.innerHTML += `<div class="area-2__wrapper">
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			close.forEach(e => {
 				e.addEventListener('click', function (e) {
 					e.preventDefault();
-					console.log('close');
 					e.target.parentElement.remove();
 					--i;
 				});
@@ -32,10 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
 			input.value = '';
 			text1.value = '';
 		}
+
+		hidden();
+		setTimeout(visibile, 3000);
+		disabled();
+		setTimeout(possible, 5000);
+		//setTimeout(() => btn.removeAttribute('disabled'), 5000);
 	});
 
 	input.addEventListener('input', function (e) {
 		text1.value = input.value;
 	})
+
+	function hidden() {
+		text2.lastElementChild.classList.add('hidden');
+	}
+
+	function visibile() {
+		text2.lastElementChild.classList.remove('hidden');
+	}
+
+	function disabled() {
+		btn.setAttribute('disabled', 'disabled');
+	}
+
+	function possible() {
+		btn.removeAttribute('disabled');
+	}
 
 });

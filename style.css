@@ -33,8 +33,7 @@ textarea {
 }
 
 .area-2 {
-	display: block;
-	min-height: 160px;
+	min-height: 190px;
 	border: 1px solid black;
 	margin-bottom: 10px;
 	padding: 5px;
@@ -54,6 +53,10 @@ textarea {
 
 .area-2__text {
 	width: 95%;
+}
+
+.hidden {
+	display: none;
 }
 
 .alex {
@@ -87,14 +90,6 @@ textarea {
 	border: 2px solid rgb(32, 137, 179);
 	box-shadow: 0 0 25px rgb(150, 237, 240);
 }
-
-/*.area-2__wrapper {
-	display: flex;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow-wrap: break-word;
-}*/
 
 .close {
 	margin: 0;
