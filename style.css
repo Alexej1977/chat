@@ -1,56 +1,92 @@
-body{
-    font-size: 14px;
-    margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-h1{
-    display: none;
+body {
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.wrapper {
+	width: 240px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+h1 {
+	display: none;
+}
+
+.form {
+	align-items: center;
+	text-align: center;
+	margin-top: 20px;
 }
 
 textarea {
-    margin-bottom: 10px;
-    padding: 5px 5px;
-    resize: none;
+	display: block;
+	width: 240px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	padding: 5px;
+	resize: none;
+	border: 1px solid black;
+}
 
+.area-2 {
+	display: block;
+	min-height: 160px;
+	border: 1px solid black;
+	margin-bottom: 10px;
+	padding: 5px;
+	text-align: left;
 }
-.alex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.button{
-    font-size: 10px;
-    width: 50px;
-    height: 24px;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #000;
-    box-sizing: border-box;
-    /* background-color:#22b1ff; */
-    font-weight: 800;
 
+.alex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-.input{
-    width: 185px;
-    height: 24px;
-    padding: 0 5px;
-    margin: 0;
-    border: 1px solid #000;
-    box-sizing: border-box;
-    margin-right: 10px;
-    color: rgb(23, 16, 119);
+
+.button {
+	font-size: 10px;
+	width: 50px;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	font-weight: 800;
 }
-.button:hover{
-    border: 2px solid rgb(32, 137, 179);
-    /* background-color: aqua; */
-    box-shadow: 0 0 25px rgb(150, 237, 240);
+
+.input {
+	width: 175px;
+	height: 24px;
+	padding: 0 5px;
+	margin: 0;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	color: rgb(23, 16, 119);
+}
+
+.button:hover {
+	border: 2px solid rgb(32, 137, 179);
+	box-shadow: 0 0 25px rgb(150, 237, 240);
+}
+
+.area-2__wrapper {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.close {
+	margin: 0;
+	padding: 0;
+	opacity: 0.3;
+	color: black;
+}
+
+.close:hover {
+	opacity: 1;
+	color: red;
+	cursor: pointer;
 }
