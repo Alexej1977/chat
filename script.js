@@ -6,49 +6,44 @@ document.addEventListener('DOMContentLoaded', () => {
 		btn = document.querySelector('.button'),
 		input = document.querySelector('.input'),
 		text1 = document.querySelector('.area-1'),
-		text2 = document.querySelector('.area-2');
+		text2 = document.querySelector('.area-2'),
+		textInput = '';
 
-	btn.addEventListener('click', function (e) {
+	btn.addEventListener('click', function () {
 		if (text1.value !== '') {
 			i += 1;
-			text2.innerHTML += `<div class="area-2__wrapper">
-			<span class="close">&times </span><span class="area-2__text">${input.value}</span></div> `;
-
-			if (i == 11) {
-				text2.firstElementChild.remove();
+			if (i === 11) {
+				text2.lastElementChild.remove();
 				--i;
 			}
 
-			let close = document.querySelectorAll('.close');
-			close.forEach(e => {
-				e.addEventListener('click', function (e) {
-					e.preventDefault();
-					e.target.parentElement.remove();
-					--i;
-				});
-			});
+			textInput = input.value;
 			input.value = '';
 			text1.value = '';
-		}
-
-		hidden();
-		setTimeout(visibile, 3000);
-		disabled();
-		setTimeout(possible, 5000);
-		//setTimeout(() => btn.removeAttribute('disabled'), 5000);
+		
+		    setTimeout(visibile, 3000);
+		    disabled();
+		    setTimeout(possible, 5000);
+		};
 	});
 
-	input.addEventListener('input', function (e) {
+	input.addEventListener('input', function () {
 		text1.value = input.value;
 	})
 
-	function hidden() {
-		text2.lastElementChild.classList.add('hidden');
-	}
 
 	function visibile() {
-		text2.lastElementChild.classList.remove('hidden');
-	}
+		text2.insertAdjacentHTML('afterbegin', `<div class="area-2__wrapper">
+		<span class="close">&times </span><span class="area-2__text">${textInput}</span></div>`);
+		
+		let close = document.querySelectorAll('.close');
+			close.forEach(e => {
+				e.addEventListener('click', function (e) {
+						e.target.parentElement.remove();
+					--i;
+				});
+			});
+	};
 
 	function disabled() {
 		btn.setAttribute('disabled', 'disabled');
@@ -57,5 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	function possible() {
 		btn.removeAttribute('disabled');
 	}
+
 
 });
